@@ -49,7 +49,7 @@ func GetCredentials() (string, string, error) {
 		if err != nil {
 			return "", "", err
 		}
-		password = string(bytePassword)
+		password = strings.TrimSpace(string(bytePassword))
 	}
 
 	return username, password, nil
